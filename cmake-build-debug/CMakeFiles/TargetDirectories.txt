@@ -1,0 +1,3 @@
+C:/Users/mrnik/CLionProjects/l1_2024/cmake-build-debug/CMakeFiles/l1_2024.dir
+C:/Users/mrnik/CLionProjects/l1_2024/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/mrnik/CLionProjects/l1_2024/cmake-build-debug/CMakeFiles/rebuild_cache.dir
