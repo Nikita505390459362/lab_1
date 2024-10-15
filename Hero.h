@@ -9,7 +9,6 @@ protected:
     std::string name;
     std::string weaponType;
     std::vector<std::string> skills;
-
 public:
     Hero(const std::string& name, const std::string& weaponType, const std::vector<std::string>& skills)
             : name(name), weaponType(weaponType), skills(skills) {}

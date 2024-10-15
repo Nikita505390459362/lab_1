@@ -55,12 +55,6 @@ build CMakeFiles/l1_2024.dir/main.cpp.obj: CXX_COMPILER__l1_2024_unscanned_Debug
   OBJECT_DIR = CMakeFiles\l1_2024.dir
   OBJECT_FILE_DIR = CMakeFiles\l1_2024.dir
 
-build CMakeFiles/l1_2024.dir/Hero.cpp.obj: CXX_COMPILER__l1_2024_unscanned_Debug C$:/Users/mrnik/CLionProjects/l1_2024/Hero.cpp || cmake_object_order_depends_target_l1_2024
-  DEP_FILE = CMakeFiles\l1_2024.dir\Hero.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\l1_2024.dir
-  OBJECT_FILE_DIR = CMakeFiles\l1_2024.dir
-
 build CMakeFiles/l1_2024.dir/PositiveHero.cpp.obj: CXX_COMPILER__l1_2024_unscanned_Debug C$:/Users/mrnik/CLionProjects/l1_2024/PositiveHero.cpp || cmake_object_order_depends_target_l1_2024
   DEP_FILE = CMakeFiles\l1_2024.dir\PositiveHero.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
@@ -93,7 +87,7 @@ build CMakeFiles/l1_2024.dir/Keeper.cpp.obj: CXX_COMPILER__l1_2024_unscanned_Deb
 #############################################
 # Link the executable l1_2024.exe
 
-build l1_2024.exe: CXX_EXECUTABLE_LINKER__l1_2024_Debug CMakeFiles/l1_2024.dir/main.cpp.obj CMakeFiles/l1_2024.dir/Hero.cpp.obj CMakeFiles/l1_2024.dir/PositiveHero.cpp.obj CMakeFiles/l1_2024.dir/Villain.cpp.obj CMakeFiles/l1_2024.dir/Monster.cpp.obj CMakeFiles/l1_2024.dir/Keeper.cpp.obj
+build l1_2024.exe: CXX_EXECUTABLE_LINKER__l1_2024_Debug CMakeFiles/l1_2024.dir/main.cpp.obj CMakeFiles/l1_2024.dir/PositiveHero.cpp.obj CMakeFiles/l1_2024.dir/Villain.cpp.obj CMakeFiles/l1_2024.dir/Monster.cpp.obj CMakeFiles/l1_2024.dir/Keeper.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\l1_2024.dir

@@ -1,7 +1,12 @@
 #include <iostream>
 #include <memory>
+#include <vector>
+#include <string>
 #include "Keeper.h"
-#include "Hero.h"
+#include "PositiveHero.h"
+#include "Monster.h"
+#include "Villain.h"
+#include "windows.h"
 
 void printMenu() {
     std::cout << "Меню:\n";
@@ -14,13 +19,86 @@ void printMenu() {
     std::cout << "Выберите опцию: ";
 }
 
+
 std::unique_ptr<Hero> createHero() {
-    return nullptr;
+    int type;
+    std::cout << "Выберите тип героя:\n";
+    std::cout << "1. Положительный герой\n";
+    std::cout << "2. Монстр\n";
+    std::cout << "3. Злодей\n";
+    std::cout << "Ваш выбор: ";
+    std::cin >> type;
+
+    std::string name;
+    std::cout << "Введите имя героя: ";
+    std::cin >> name;
+
+    switch (type) {
+        case 1: {
+            std::string weaponType;
+            std::vector<std::string> skills;
+            std::string skill;
+            int numSkills;
+
+            std::cout << "Введите тип оружия: ";
+            std::cin >> weaponType;
+            std::cout << "Введите количество навыков: ";
+            std::cin >> numSkills;
+
+            for (int i = 0; i < numSkills; ++i) {
+                std::cout << "Введите навык " << i + 1 << ": ";
+                std::cin >> skill;
+                skills.push_back(skill);
+            }
+
+            return std::make_unique<PositiveHero>(name, weaponType, skills);
+        }
+        case 2: {
+            std::string appearanceDescription;
+            std::cout << "Введите описание внешности монстра: ";
+            std::cin.ignore();
+            std::getline(std::cin, appearanceDescription);
+            return std::make_unique<Monster>(name, appearanceDescription);
+        }
+        case 3: {
+            std::string weaponType, crime, habitat;
+            std::vector<std::string> skills;
+            std::string skill;
+            int numSkills;
+
+            std::cout << "Введите тип оружия: ";
+            std::cin >> weaponType;
+            std::cout << "Введите количество навыков: ";
+            std::cin >> numSkills;
+
+            for (int i = 0; i < numSkills; ++i) {
+                std::cout << "Введите навык " << i + 1 << ": ";
+                std::cin >> skill;
+                skills.push_back(skill);
+            }
+
+            std::cout << "Введите преступление: ";
+            std::cin.ignore();
+            std::getline(std::cin, crime);
+
+            std::cout << "Введите место обитания: ";
+            std::getline(std::cin, habitat);
+
+            return std::make_unique<Villain>(name, weaponType, skills, crime, habitat);
+        }
+        default:
+            std::cout << "Неверный тип героя. Герой не создан.\n";
+            return nullptr;
+    }
 }
 
 int main() {
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
+
     Keeper keeper;
     int choice;
+
 
     do {
         printMenu();

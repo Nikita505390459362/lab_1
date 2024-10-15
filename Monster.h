@@ -2,6 +2,7 @@
 #define MONSTER_H
 
 #include "Hero.h"
+#include <string>
 #include <iostream>
 
 class Monster : public Hero {
@@ -10,7 +11,7 @@ private:
 
 public:
     Monster(const std::string& name, const std::string& appearanceDescription)
-            : Hero(name, "", {}), appearanceDescription(appearanceDescription) {}
+            : Hero(name, "None", {}), appearanceDescription(appearanceDescription) {}
 
     void printInfo() const override {
         std::cout << "Monster: " << name << "\nAppearance: " << appearanceDescription << std::endl;
